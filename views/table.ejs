@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        header{
+            background:linear-gradient(45deg,blue,rgb(0, 140, 255),white);
+            width:100%;
+            height:10vh;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+        h1{
+            font-size:2em;
+            text-align:center;
+            color:white;
+        }
+        table{
+            width:90%;
+            margin:2% auto;
+            text-align:center;
+        }
+        table,td{
+            border-collapse: collapse;
+            border:1px solid black;
+        }
+
+        thead{
+            font-size:1.7em;
+            font-weight:800;
+        }
+        tbody td{
+            font-size:1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Available laptop stocks</h1>
+    </header>
+    
+    <table>
+        <thead>
+            <tr>
+                <td>Model</td>
+                <td>Brand</td>
+                <td>OS</td>
+                <td>Price</td>
+                <td>Colors</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            <%for(let i=0;i<data.length;i++){%>
+                <tr>
+                    <td>
+                        <%= data[i].model%>
+                    </td>
+                    <td>
+                        <%= data[i].brand%>
+                    </td>
+                    <td>
+                        <%= data[i].os%>
+                    </td>
+                    <td>
+                        <%= data[i].price%>
+                    </td>
+                    <td>
+                        <%= data[i].colors%>
+                    </td>
+                </tr>
+                <%}%>
+
+        </tbody>
+    </table>
+</body>
+
+</html>
